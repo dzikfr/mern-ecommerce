@@ -1,0 +1,5 @@
+{
+    "files.exclude": {
+        "{   \"css.lint.unknownAtRules\": \"ignore\" }": true
+    }
+}

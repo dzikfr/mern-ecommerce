@@ -10,10 +10,10 @@ const Admin = () => {
         setLoading(true);
 
         axios
-            .get('http://localhost:3000/product/')
+            .get('http://localhost:3000/product')
             .then(
-                (respose) => {
-                    setProduct(respose.data.data);
+                (response) => {
+                    setProduct(response.data.data);
                     setLoading(false);
                 }
             )
@@ -36,14 +36,14 @@ const Admin = () => {
                                     Add Item +
                                 </Link>
                             </th>
-                            <th>Name</th>
-                            <th>Price</th>
+                            <th>Name:</th>
+                            <th>Price:</th>
                             <th>Description</th>
                             <th>Category</th>
                         </tr>
                     </thead>
                     <tbody>
-                    {product.map((product, inedx)=>{
+                    {product.map((product, index)=>(
                         <tr key={product._id} className='bg-white hover:bg-gray-300'>
                             <td>
                                 <div className='avatar'>
@@ -57,7 +57,7 @@ const Admin = () => {
                             <td className='py-3 px-5'>{product.description}</td>
                             <td className='py-3 px-5'>{product.category}</td>
                         </tr>
-                    })}
+                    ))}
                     </tbody>
                 </table>
             </div>
@@ -65,4 +65,4 @@ const Admin = () => {
     )
 }
 
-export default Admin
+export default Admin;

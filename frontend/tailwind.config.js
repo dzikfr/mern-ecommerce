@@ -1,16 +1,19 @@
 /** @type {import('tailwindcss').Config} */
+import daisyui from "daisyui";
+
 export default {
   content: [
     "./index.html",
-    "./src/**/*{js,ts,jsx,tsx}"
+    "./src/**/*.{js,ts,jsx,tsx}" // Perbaiki path ini
   ],
   theme: {
     extend: {},
   },
   plugins: [
     require("@tailwindcss/typography"),
-    require("daisyui"),
-  ], daisyui :{
+    daisyui, // Anda juga bisa menggunakan daisyui langsung jika sudah diimport
+  ],
+  daisyui: {
     themes: [
       {
         mytheme: {
@@ -18,20 +21,19 @@ export default {
           secondary: "#f6d860",
           accent: "#37cdbe",
           neutral: "#3d4451",
-          "base-100": "#ffffff"
+          "base-100": "#ffffff",
         },
       },
       {
         business: {
-          ...require("daisyui/src/theming/themes")["business"]
+          ...require("daisyui/src/theming/themes")["business"],
         },
       },
       "light",
       "dark",
-      "cupcakes",
+      "cupcake",
       "forest",
       "business"
     ],
   },
-}
-
+};
