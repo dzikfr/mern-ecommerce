@@ -56,6 +56,18 @@ const Admin = () => {
                             <td className='py-3 px-5'>{product.price}</td>
                             <td className='py-3 px-5'>{product.description}</td>
                             <td className='py-3 px-5'>{product.category}</td>
+                            <td className='py-3 px-5'>
+                                <div className='flex justify-center gap-x-1'>
+                                    <Link to={`/admin/product/edit/${product._id}`}
+                                    className='bg-orange-500 hover:bg-orange-200 text-white py-2 px-4 font-medium rounded-l-lg text-sm'>
+                                    Edit
+                                    </Link>
+                                    <Link to={`/admin/product/delete/${product._id}`}
+                                    className='bg-red-500 hover:bg-red-200 text-white py-2 px-4 font-medium rounded-l-lg text-sm'>
+                                    Delete
+                                    </Link>
+                                </div>
+                            </td>
                         </tr>
                     ))}
                     </tbody>
