@@ -9,7 +9,8 @@ import "./index.css"
 function App() {
   return (
     <>
-    <Routes>
+    <h1>test</h1>
+    {/* <Routes>
       <Route
         path="/admin/*"
         element={
@@ -18,7 +19,7 @@ function App() {
           </ProtectedRouter>
         }
       />
-    </Routes>
+    </Routes> */}
     </>
   )
 };
@@ -27,8 +28,8 @@ const AdminRoutes = () => {
   return(
     <Routes>
       <Route path="/" element={<Admin/>}/>
-      <Route path="/product/edit/:id" element={<EditProduct/>}/>
-      <Route path="/product/delete/:id" element={<DeleteProduct/>}/>
+      {/* <Route path="/product/edit/:id" element={<EditProduct/>}/>
+      <Route path="/product/delete/:id" element={<DeleteProduct/>}/> */}
     </Routes>
   )
 };

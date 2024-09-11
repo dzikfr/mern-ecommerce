@@ -38,7 +38,7 @@ function EditProduct() {
         const data = { name, price, description, category };
         setLoading(true);
         axios
-            .get(`http://localhost:3000/product/${id}`, data)
+            .put(`http://localhost:3000/product/${id}`, data)
             .then(() => {
                 setLoading(false);
                 enqueueSnackbar('Produk berhasil diedit', {variant:'success'});
@@ -51,10 +51,13 @@ function EditProduct() {
             });
     };
 
+    if(loading){
+        return <div>Loading...</div>
+    }
 
   return (
     <div>
-      
+      Edit Produk
     </div>
   )
 }
