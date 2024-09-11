@@ -9,8 +9,7 @@ import "./index.css"
 function App() {
   return (
     <>
-    <h1>test</h1>
-    {/* <Routes>
+    <Routes>
       <Route
         path="/admin/*"
         element={
@@ -19,7 +18,7 @@ function App() {
           </ProtectedRouter>
         }
       />
-    </Routes> */}
+    </Routes>
     </>
   )
 };

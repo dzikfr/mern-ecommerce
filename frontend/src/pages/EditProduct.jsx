@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import {useSnackbar} from 'notistack';
 import {Link, useNavigate, useParams} from 'react-router-dom';
 import axios from 'axios';  
-import { error } from 'console';
 
 function EditProduct() {
 
