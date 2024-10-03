@@ -4,14 +4,14 @@ import daisyui from "daisyui";
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}" // Perbaiki path ini
+    "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {},
   },
   plugins: [
     require("@tailwindcss/typography"),
-    daisyui, // Anda juga bisa menggunakan daisyui langsung jika sudah diimport
+    daisyui,
   ],
   daisyui: {
     themes: [

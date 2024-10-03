@@ -3,6 +3,7 @@ import {Product} from "../models/productModels.js";
 
 const router = express.Router();
 
+//localhost:3000/product/
 
 //GET ALL DATA PRODUCT
 router.get('/', async (request, response) => {

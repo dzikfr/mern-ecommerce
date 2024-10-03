@@ -32,14 +32,15 @@ const Admin = () => {
                     <thead>
                         <tr>
                             <th>
-                                <Link to="" className='bg-green-600 hover:bg-green-900 text-white py-2 px-4 font-medium rounded-lg shadow-md'>
+                                <Link to="" 
+                                    className='bg-green-600 hover:bg-green-900 text-white py-2 px-4 font-medium rounded-lg shadow-md'>
                                     Add Item +
                                 </Link>
                             </th>
-                            <th>Name:</th>
-                            <th>Price:</th>
-                            <th>Description</th>
-                            <th>Category</th>
+                            <th>NAME</th>
+                            <th>PRICE</th>
+                            <th>DESCRIPTION</th>
+                            <th>CATEGORY</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -12,6 +12,9 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.env.CLOUDINARY_CLOUD_NAME
+.env.CLOUDINARY_API_SECRET
+.env.CLOUDINARY_API_KEY
 
 # Directory for environment-specific configurations
 .config/

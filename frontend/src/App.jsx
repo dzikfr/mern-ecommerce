@@ -27,8 +27,8 @@ const AdminRoutes = () => {
   return(
     <Routes>
       <Route path="/" element={<Admin/>}/>
-      {/* <Route path="/product/edit/:id" element={<EditProduct/>}/>
-      <Route path="/product/delete/:id" element={<DeleteProduct/>}/> */}
+      <Route path="/product/edit/:id" element={<EditProduct/>}/>
+      <Route path="/product/delete/:id" element={<DeleteProduct/>}/>
     </Routes>
   )
 };
