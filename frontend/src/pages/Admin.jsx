@@ -32,7 +32,7 @@ const Admin = () => {
                     <thead>
                         <tr>
                             <th>
-                                <Link to="" 
+                                <Link to="/admin/product/create" 
                                     className='bg-green-600 hover:bg-green-900 text-white py-2 px-4 font-medium rounded-lg shadow-md'>
                                     Add Item +
                                 </Link>
