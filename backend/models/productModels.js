@@ -24,7 +24,7 @@ const productSchema = mongoose.Schema({
   category: {
     type: String,
     required: true,
-    enum: ["course", "template"],
+    enum: ["food", "drink"],
   },
 });
 

@@ -164,8 +164,8 @@ const CreateProduct = () => {
             required
           >
             <option value="">Select Category</option>
-            <option value="course">Course</option>
-            <option value="template">Template</option>
+            <option value="food">Food</option>
+            <option value="drink">Drink</option>
           </select>
 
           <label htmlFor="img" className="block text-md text-gray-600 mb-2">

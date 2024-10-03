@@ -3,9 +3,8 @@ import {Product} from "../models/productModels.js";
 
 const router = express.Router();
 
-//localhost:3000/product/
-
 //GET ALL DATA PRODUCT
+//localhost:3000/product/
 router.get('/', async (request, response) => {
     try {
         const product = await Product.find({});
@@ -20,6 +19,7 @@ router.get('/', async (request, response) => {
 
 
 //GET DATA BY ID
+//localhost:3000/product/:id
 router.get('/:id', async (request, response) => {
     try {
         const {id} = request.params;
@@ -33,6 +33,7 @@ router.get('/:id', async (request, response) => {
 
 
 //POST DATA
+//localhost:3000/product/
 router.post('/', async (request, response) => {
     try {
         if (
@@ -42,7 +43,7 @@ router.post('/', async (request, response) => {
             !request.body.category
         ) {
             return response.status(400).send({
-                message: 'Field yang dibutuhkan kurang lengkap'
+                message: 'Fields are incomplete'
             });
         }
 
@@ -65,6 +66,7 @@ router.post('/', async (request, response) => {
 
 
 //UPDATE DATA
+//localhost:3000/product/:id
 router.put('/:id', async (request, response) => {
     try {
         if(
@@ -91,16 +93,17 @@ router.put('/:id', async (request, response) => {
 
 
 //DELETE DATA BY ID
+//localhost:3000/product/:id
 router.delete('/:id', async (request, response) => {
     try {
         const {id} = request.params;
         const result = await Product.findByIdAndDelete(id);
 
         if(!result){
-            return response.status(404).json({message: 'Produk tidak ditemukan'})
+            return response.status(404).json({message: 'Product not found'})
         }
 
-        response.status(200).json({message: 'Produk dihapus', deletedItem: result});
+        response.status(200).json({message: 'Product deleted', deletedItem: result});
 
     } catch (error) {
         console.log(error.message);

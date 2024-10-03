@@ -118,8 +118,8 @@ function EditProduct() {
             required
           >
             <option value="">Select Category</option>
-            <option value="course">Course</option>
-            <option value="template">Template</option>
+            <option value="food">Food</option>
+            <option value="drink">Drink</option>
           </select>
           <button
             onClick={handleEditProduct}

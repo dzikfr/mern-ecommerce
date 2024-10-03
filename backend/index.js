@@ -1,30 +1,37 @@
 import express from "express";
-import { config } from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
-import { v2 as cloudinary } from "cloudinary";
 import multer from "multer";
+import { config } from "dotenv";
+import { v2 as cloudinary } from "cloudinary";
 import { CloudinaryStorage } from "multer-storage-cloudinary";
-
 import productRoute from "./routes/productRoute.js";
 
 config();
 
 const app = express();
 
+//use cors and json
 app.use(cors());
+app.use(express.json());
 
+//listening server
 app.listen(process.env.PORT, () => console.log(`Server berjalan pada PORT ${process.env.PORT}`));
 
+
+//database connecting
 mongoose
     .connect(process.env.mongoDb)
     .then(() => console.log("Database terkoneksi"))
     .catch((error) => console.log(error));
 
-app.use(express.json());
 
+
+//route
 app.use('/product', productRoute);
 
+
+//config with cloudinary
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
     api_key: process.env.CLOUDINARY_API_KEY,
@@ -57,8 +64,8 @@ app.post('/upload-image', parser.single('file'), (req, res) => {
         if(!req.file.path){
             throw new Error('File uploaded, but no path available');
         }
-
         res.json({secure_url: req.file.path});
+        
     } catch (error) {
         console.error('Error during file uploaded', error);
         res.status(500).send('Internal server error');
