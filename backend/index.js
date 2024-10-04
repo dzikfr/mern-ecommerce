@@ -30,7 +30,6 @@ mongoose
 //route
 app.use('/product', productRoute);
 
-
 //config with cloudinary
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
