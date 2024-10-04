@@ -7,12 +7,16 @@ import DeleteProduct from "./pages/DeleteProduct.jsx";
 import EditProduct from "./pages/EditProduct.jsx";
 import CreateProduct from "./pages/CreateProduct.jsx";
 import Home from "./pages/Home.jsx";
+import Navbar from "./components/Navbar.jsx";
+import Cart from "./pages/Cart.jsx";
 
 function App() {
   return (
     <>
+    <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="/cart" element={<Cart/>} />
         <Route
           path="/admin/*"
           element={

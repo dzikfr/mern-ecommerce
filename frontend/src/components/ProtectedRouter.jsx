@@ -3,7 +3,6 @@ import {Navigate} from "react-router-dom";
 
 const isAuthenticated = () => {
     //todo next
-    // return !!localStorage.getItem("token");
     return true;
 };
 
