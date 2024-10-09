@@ -14,6 +14,10 @@ const ProductSingleCard = ({ product }) => {
     removeFromCart(product._id);
   };
 
+  const idrFormat = (value) => {
+    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  };
+
   return (
     <div className="card card-compact w-96 bg-base-100 shadow-xl">
       <figure>
@@ -27,7 +31,7 @@ const ProductSingleCard = ({ product }) => {
       <div className="card-body bg-base-200">
         <h2 className="card-title">{product.name}</h2>
         <p>{product.description || "No description available."}</p>
-        <div className="price">Rp. {product.price.toFixed(2)}</div>
+        <div className="price">Rp. {idrFormat(product.price)}</div>
       </div>
 
       <div className="card-actions justify-end">

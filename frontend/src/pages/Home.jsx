@@ -17,6 +17,8 @@ useEffect(() => {
         });
 }, []);
 
+const latestProducts = product.slice(0, 3);
+
   return (
     <div className="p-4 max-w-[1300px] mx-auto my-16">
       <div className="hero-content text-center mb-24">
@@ -33,7 +35,7 @@ useEffect(() => {
         </div>
       </div>
       
-    <ProductCard product={product} />
+    <ProductCard product={latestProducts} />
 
     </div>
   )

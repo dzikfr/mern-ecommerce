@@ -2,7 +2,9 @@ import React from 'react'
 import { useCart } from '../context/CartContext';
 
 const CartIcon = () => {
+
     const { cartItems } = useCart();
+
     const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
