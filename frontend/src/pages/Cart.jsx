@@ -40,11 +40,11 @@ const handleCheckout = async () => {
     //         console.error('Checkout error:', error);
     //     }
     };
-
-    const formatRupiah = (value) => {
-      return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    };
     
+    const idrFormat = (value) => {
+        return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      };
+
   return (
     <div className='p-4 mt-16 max-w-[1400px] mx-auto'>
         <h2 className='text-2xl font-semibold text-center my-6'>Shopping Cart</h2>
